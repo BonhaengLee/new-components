@@ -1,4 +1,4 @@
-import "./SearchBar.css";
+import "./SearchBar.scss";
 import React from "react";
 
 const SearchBar = ({
@@ -10,13 +10,22 @@ const SearchBar = ({
     keyword: any;
     updateField: any;
 }) => {
+    const [selectSchool, setSelectSchool] = React.useState<boolean>(false);
     const updateText = (text: any) => {
         updateField("keyword", text);
         updateField("results", []);
+        // 선택한 학교명 따로 렌더링시킬 때 true 상태, true이면서 keyword!==""이면 제출 허용
+        setSelectSchool(true);
     };
 
     const cancelSearch = () => {
         updateField("keyword", "");
+    };
+
+    const updateInputField = (field: string, value: any) => {
+        updateField(field, value);
+        // 선택한 학교명을 변경 시도하면 지워짐
+        setSelectSchool(false);
     };
 
     //renders our results using the SearchPreview component
@@ -56,11 +65,16 @@ const SearchBar = ({
                 className="search-bar"
                 placeholder="Search"
                 value={keyword}
-                onChange={(e) => updateField("keyword", e.target.value)}
+                onChange={(e) => updateInputField("keyword", e.target.value)}
+                //onChange={(e) => updateField("keyword", e.target.value)}
+                autoFocus
             />
             {results.length > 0 ? (
                 <div className="search-results">{renderResults}</div>
             ) : null}
+            <div className="des-input-set">
+                <input defaultValue={selectSchool ? keyword : ""} readOnly />
+            </div>
         </div>
     );
 };

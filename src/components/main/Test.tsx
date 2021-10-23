@@ -19,11 +19,17 @@ export default function Test() {
         { name: "Alicia keys", age: 25, position: "Librarian" },
         { name: "Alexa Dot", age: 30, position: "teacher" },
         { name: "Bob Squarepants", age: 20, position: "secretary" },
+        { name: "Coa Lee", age: 27, position: "web FE developer" },
+        { name: "강경안중학교", age: 27, position: "web FE developer" },
+        { name: "경안초등학교", age: 27, position: "web FE developer" },
+        { name: "경안고등학교", age: 27, position: "web FE developer" },
     ]);
     const [keyword, setKeyword] = React.useState<string>("");
     const [results, setResults] = React.useState<ISearchBarData[]>([]);
 
     const matchName = (name: string, keyword: string) => {
+        console.log("matchName", name, keyword);
+
         let keyLen = keyword.length;
         name = name.toLowerCase().substring(0, keyLen);
         // returns true only if we have a match and keyword isn't empty

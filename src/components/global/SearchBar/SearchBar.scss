@@ -117,3 +117,20 @@ SearchPreview Component
 .start {
     border-top: none;
 }
+/* searchBar에서 값을 선택해서 렌더링(선택하지 않은 값으로 제출 불가) */
+.des-input-set {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: none;
+    width: 400px;
+    max-height: 400px;
+    padding: 10px;
+    overflow-y: scroll;
+    margin-top: 5px;
+    border-radius: 0.2rem;
+
+    input {
+        border: none;
+    }
+}
