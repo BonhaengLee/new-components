@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uratcha</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="../dist/bundle.js" defer></script>
+  </head>
+  <body>
+    <section class="search-result-container">
+      <div class="search-result-container__inner">
+        <ul class="search-result-container__list">
+          <li class="search-result-item">
+            <img src="https://picsum.photos/490/700" alt="poster" />
+            <div class="search-result-item__info">
+              <div class="search-result-item__title">돈 룩 업</div>
+              <div class="search-result-item__subtitle">
+                <span>2003 ・ 미국/뉴질랜드/독일/한국/인도/일본</span>
+              </div>
+              <div class="search-result-item__category"><span>영화</span></div>
+            </div>
+          </li>
+          <li class="search-result-item">
+            <img src="https://picsum.photos/490/700" alt="poster" />
+            <div class="search-result-item__info">
+              <div class="search-result-item__title">돈 룩 업</div>
+              <div class="search-result-item__subtitle">2003 ・ 미국/뉴질랜드/독일/한국/인도/일본</div>
+              <div class="search-result-item__category"><span>영화</span></div>
+            </div>
+          </li>
+          <li class="search-result-item">
+            <img src="https://picsum.photos/490/700" alt="poster" />
+            <div class="search-result-item__info">
+              <div class="search-result-item__title">돈 룩 업</div>
+              <div class="search-result-item__subtitle">2003 ・ 미국/뉴질랜드/독일/한국/인도/일본</div>
+              <div class="search-result-item__category"><span>영화</span></div>
+            </div>
+          </li>
+          <li class="search-result-item">
+            <img src="https://picsum.photos/490/700" alt="poster" />
+            <div class="search-result-item__info">
+              <div class="search-result-item__title">돈 룩 업</div>
+              <div class="search-result-item__subtitle">2003 ・ 미국/뉴질랜드/독일/한국/인도/일본</div>
+              <div class="search-result-item__category"><span>영화</span></div>
+            </div>
+          </li>
+          <li class="search-result-item">
+            <img src="https://picsum.photos/490/700" alt="poster" />
+            <div class="search-result-item__info">
+              <div class="search-result-item__title">돈 룩 업</div>
+              <div class="search-result-item__subtitle">2003 ・ 미국/뉴질랜드/독일/한국/인도/일본</div>
+              <div class="search-result-item__category"><span>영화</span></div>
+            </div>
+          </li>
+          <li class="search-result-item">
+            <img src="https://picsum.photos/490/700" alt="poster" />
+            <div class="search-result-item__info">
+              <div class="search-result-item__title">돈 룩 업</div>
+              <div class="search-result-item__subtitle">2003 ・ 미국/뉴질랜드/독일/한국/인도/일본</div>
+              <div class="search-result-item__category"><span>영화</span></div>
+            </div>
+          </li>
+          <li class="search-result-item">
+            <img src="https://picsum.photos/490/700" alt="poster" />
+            <div class="search-result-item__info">
+              <div class="search-result-item__title">돈 룩 업</div>
+              <div class="search-result-item__subtitle">2003 ・ 미국/뉴질랜드/독일/한국/인도/일본</div>
+              <div class="search-result-item__category"><span>영화</span></div>
+            </div>
+          </li>
+          <li class="search-result-item">
+            <img src="https://picsum.photos/490/700" alt="poster" />
+            <div class="search-result-item__info">
+              <div class="search-result-item__title">돈 룩 업</div>
+              <div class="search-result-item__subtitle">2003 ・ 미국/뉴질랜드/독일/한국/인도/일본</div>
+              <div class="search-result-item__category"><span>영화</span></div>
+            </div>
+          </li>
+          <!-- li요소가 추가되면 그 개수를 세서 grid repeat(auto-fit, minmax(16.6%, auto)) % 계산 -->
+        </ul>
+      </div>
+    </section>
+    <script>
+      const $carousel = document.querySelector('.search-result-container');
+      const $wind = document.querySelector('.search-result-container__inner');
+      const $list = document.querySelector('.search-result-container__list');
+      const $carouselImages = document.querySelectorAll('.search-result-item img');
+      console.log($carouselImages, $carouselImages[0].width);
+      console.log(document.documentElement.clientWidth, window.innerWidth);
+    </script>
+  </body>
+</html>

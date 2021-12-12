@@ -1,0 +1,122 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'RobotoInCjk', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0 70px;
+}
+
+.search-result-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+
+  width: 1300px;
+  height: 100%;
+
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.search-result-container__inner {
+  max-width: 1320px;
+  height: 100%;
+  overflow-x: auto;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: row wrap;
+
+  --currentSlide: 0;
+  --duration: 0;
+  /* 수평 정렬 */
+  display: flex;
+  transition: transform calc(var(--duration) * 1ms) ease-out;
+  transform: translate3D(calc(var(--currentSlide) * -100%), 0, 0);
+}
+
+.search-result-container__list {
+  width: 100%;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  /* no list style */
+  list-style: none;
+  padding: 0;
+}
+
+.search-result-item {
+  padding: 5px;
+}
+
+.search-result-item__title {
+  height: 20px;
+  font-size: 15px;
+}
+
+.search-result-item__subtitle {
+  height: 18px;
+  font-size: 13px;
+}
+
+.search-result-item__category {
+  height: 16px;
+  font-size: 12px;
+}
+
+.search-result-item__subtitle,
+.search-result-item__category {
+  color: #a0a0a0;
+}
+
+.search-result-item__title,
+.search-result-item__subtitle,
+.search-result-item__category {
+  max-width: 206px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.search-result-item > span {
+  display: block;
+}
+
+.search-result-item img {
+  width: 100%;
+  height: auto;
+  max-height: 297px;
+}
+
+@media (max-width: 1500px) {
+  .search-result-item {
+    width: 16.6%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .search-result-item {
+    width: 20%;
+  }
+}
+
+@media (max-width: 760px) {
+  .search-result-item {
+    width: 25%;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-result-item {
+    width: 33.3%;
+  }
+}
