@@ -1,10 +1,11 @@
 import React from "react";
 
 const edit = (): JSX.Element => {
-    return <></>;
+  return <></>;
 };
 
 export default edit;
+
 // import React from 'react'
 // import { EditorState, RichUtils, AtomicBlockUtils } from 'draft-js'
 // import Editor from 'draft-js-plugins-editor'

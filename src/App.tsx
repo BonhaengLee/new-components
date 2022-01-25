@@ -1,15 +1,13 @@
-import "./App.css";
-import React from "react";
-import Test from "./components/main/Test";
+import BorderButton from "./components/common/borderButton/BorderButton";
 
 function App() {
-    return (
-        <>
-            <div className="App">
-                <Test />
-            </div>
-        </>
-    );
+  return (
+    <>
+      <div className="App">
+        <BorderButton handleClick={() => console.log("")}>버튼</BorderButton>
+      </div>
+    </>
+  );
 }
 
 export default App;
