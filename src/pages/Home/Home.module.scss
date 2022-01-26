@@ -1,0 +1,39 @@
+.ly_header {
+  border-bottom: 1px solid #ddd;
+
+  &_inner {
+    max-width: 1230px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    // 검색 아이콘 배치를 위한 position
+    position: relative;
+    // 로고 이미지 상하 가운데 정렬
+    padding-top: 7px;
+    .logo {
+      // A tag로 img 감싸기 위한 display
+      display: inline-block;
+      height: 36px;
+    }
+
+    &::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f002";
+      // All required to make icons render reliably
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      display: block;
+      width: 2px;
+      height: 20px;
+      transform: translateY(-56%);
+    }
+  }
+}

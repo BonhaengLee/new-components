@@ -2,12 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BroswerRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+// font 및 베이스 스타일과 reset을 적용하기 위한 CSS
+import "./styles/globals.scss";
+import "./styles/reset.css";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </BrowserRouter>,
+
   document.getElementById("root")
 );
 

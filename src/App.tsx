@@ -1,11 +1,13 @@
-import BorderButton from "./components/common/borderButton/BorderButton";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
     <>
-      <div className="App">
-        <BorderButton handleClick={() => console.log("")}>버튼</BorderButton>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Login />} /> */}
+      </Routes>
     </>
   );
 }
