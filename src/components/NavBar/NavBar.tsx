@@ -4,7 +4,6 @@ import styles from "./NavBar.module.scss";
 const cx = classNames.bind(styles);
 
 const NavBar = (): JSX.Element => {
-  console.log(styles);
   return (
     <nav className={styles.bl_tabNav}>
       <ul className={styles.bl_tabNav_inner}>
@@ -40,7 +39,7 @@ const NavBar = (): JSX.Element => {
         <li>
           <a
             className={cx(styles.bl_tabNav_link, styles.bl_tabNav_link__more)}
-            href="#"
+            href="/more"
           >
             더보기
           </a>
