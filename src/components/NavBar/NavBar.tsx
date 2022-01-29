@@ -1,5 +1,5 @@
-import classNames from "classnames/bind";
 import styles from "./NavBar.module.scss";
+import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);
 
@@ -15,15 +15,15 @@ const NavBar = (): JSX.Element => {
               styles.bl_tabNav_link__market,
               styles.is_active
             )}
-            href="#"
+            href="/"
           >
-            <span className={styles.el_beforeIcon}>시장</span>
+            시장
           </a>
         </li>
         <li>
           <a
             className={cx(styles.bl_tabNav_link, styles.bl_tabNav_link__news)}
-            href="#"
+            href="/news"
           >
             뉴스
           </a>
@@ -31,7 +31,7 @@ const NavBar = (): JSX.Element => {
         <li>
           <a
             className={cx(styles.bl_tabNav_link, styles.bl_tabNav_link__star)}
-            href="#"
+            href="/stars"
           >
             관심목록
           </a>

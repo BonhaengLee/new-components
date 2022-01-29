@@ -1,5 +1,3 @@
-import NavBar from "../../components/NavBar/NavBar";
-
 import styles from "./Home.module.scss";
 
 const Home = (): JSX.Element => {
@@ -7,8 +5,7 @@ const Home = (): JSX.Element => {
     <>
       <header className={styles.ly_header}>
         <div className={styles.ly_header_inner}>
-          {/* 레이아웃 안에 로고, 검색 버튼 배치*/}
-          <a className={styles.logo} href="/" rel="home">
+          <a className={styles.el_logo} href="/" rel="home">
             <img src="http://placeimg.com/100/36/any" alt="logo" />
           </a>
         </div>
@@ -22,8 +19,6 @@ const Home = (): JSX.Element => {
       </main>
 
       <footer>{/* 푸터 */}</footer>
-
-      <NavBar />
     </>
   );
 };
