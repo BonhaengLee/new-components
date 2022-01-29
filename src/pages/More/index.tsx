@@ -1,16 +1,16 @@
 import classNames from "classnames/bind";
-import Button from "../../components/Button/Button";
-import GoogleButton from "../../components/GoogleButton/GoogleButton";
 import styles from "./More.module.scss";
+
+import GoogleButton from "../../components/GoogleButton/GoogleButton";
+import MoreList from "../../components/MoreList";
 
 const cx = classNames.bind(styles);
 
 const More = (): JSX.Element => {
   return (
-    <>
-      <Button>로그인</Button>
-      <GoogleButton />
-    </>
+    <div className={styles.ly_more}>
+      <MoreList />
+    </div>
   );
 };
 

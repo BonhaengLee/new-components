@@ -31,7 +31,7 @@ const NavBar = (): JSX.Element => {
         <li>
           <a
             className={cx(styles.bl_tabNav_link, styles.bl_tabNav_link__star)}
-            href="/stars"
+            href="/watchlist"
           >
             관심목록
           </a>

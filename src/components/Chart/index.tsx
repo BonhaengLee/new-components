@@ -1,5 +1,4 @@
 import styles from "./Chart.module.scss";
-
 import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);
@@ -37,9 +36,6 @@ const Chart = (): JSX.Element => {
           </section>
         </article>
       </main>
-
-      {/* 스피너 */}
-      {/* <i className={cx("fas fa-spinner fa-pulse fa-4x", styles.faSpinner)}></i> */}
     </>
   );
 };

@@ -4,7 +4,7 @@ import styles from "./News.module.scss";
 const cx = classNames.bind(styles);
 
 const News = (): JSX.Element => {
-  return <>뉴스 페이지</>;
+  return <div className={styles.ly_news}>뉴스 페이지</div>;
 };
 
 export default News;

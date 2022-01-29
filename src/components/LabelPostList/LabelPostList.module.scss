@@ -1,5 +1,6 @@
 .bl_vertPosts {
   &_item {
+    margin: 20px; // custom
     padding-top: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid #ddd;
@@ -11,10 +12,29 @@
 
   &_header {
     margin-bottom: 10px;
+
+    margin-right: 0px;
   }
 
   &_date {
     font-size: 0.875rem;
+
+    margin-right: 10px;
+  }
+
+  &_labels {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-bottom: -10px;
+
+    & > *:last-child {
+      margin-right: 0;
+    }
+
+    & > li {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
   }
 
   &_ttl {

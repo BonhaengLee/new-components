@@ -1,11 +1,12 @@
 .bl_tabNav {
-  background-color: currentColor;
-  font-size: 12px;
   padding: 6px 0;
   overflow: hidden;
   position: fixed;
   bottom: 0;
   width: 100%;
+
+  background-color: currentColor;
+  font-size: 12px;
 
   &_inner {
     display: flex;

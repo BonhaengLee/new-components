@@ -1,0 +1,14 @@
+.ly_header {
+  border-bottom: 1px solid #ddd;
+
+  &_inner {
+    max-width: 1230px;
+    padding: 7px 15px 0px;
+    margin-right: auto;
+    margin-left: auto;
+
+    .el_logo {
+      display: inline-block;
+    }
+  }
+}
