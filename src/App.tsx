@@ -10,12 +10,14 @@ import GreetingPage from "./pages/Beta/greetingPage";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
+import TodoApp from "./pages/TodoApp";
+
 function App() {
   // const router = useRouter();
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<TodoApp />} />
         <Route path="/news" element={<News />} />
         <Route path="/watchlist" element={<Watchlist />} />
         <Route path="/more" element={<More />} />
@@ -24,13 +26,8 @@ function App() {
 
         <Route path="*" element={<Page404 />} />
       </Routes>
-      {/* // Footer, NavBar는 에러 페이지 제외하고 공통 */}
-      {/* {router.pathname !== "/_error" && ( */}
-      <>
-        <Footer />
-        <NavBar />
-      </>
-      {/* )} */}
+      {/* <Footer /> */}
+      {/* <NavBar /> */}
     </>
   );
 }
