@@ -1,11 +1,11 @@
-import { renderHook, act } from "@testing-library/react-hooks";
+import { renderHook, act } from "@testing-library/react-hooks/dom";
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
 
-import { getTodos, Todo, State } from "../../api/todo";
+import { Todo, State } from "../../api/todo";
 import useTodo from ".";
 
-const TEMP_TODOS: Todo[] = [
+export const TEMP_TODOS: Todo[] = [
   {
     id: 0,
     text: "todo1",
@@ -26,7 +26,7 @@ const TEMP_TODOS: Todo[] = [
 const mock = new MockAdapter(axios);
 
 describe("Todo App", () => {
-  test("can add item", async () => {
+  it("can add item", async () => {
     // mock.onGet("/todos").reply(200, { todos: TEMP_TODOS });
     // const { result, rerender, waitForNextUpdate } = renderHook(() => useTodo());
     const fetchTodos: any = jest.fn().mockImplementation(() => TEMP_TODOS);
@@ -70,7 +70,7 @@ describe("can remove todo item", () => {
     act(() => result.current.addTodo(TEMP_TODOS[2].text));
   });
 
-  test("first item cancel", () => {
+  it("first item cancel", () => {
     expect(hooks.current.todos.length).toBe(6);
 
     act(() => hooks.current.cancelTodoByIdx(0));
@@ -78,7 +78,7 @@ describe("can remove todo item", () => {
     expect(hooks.current.todos.length).toBe(5);
   });
 
-  test("last item cancel", () => {
+  it("last item cancel", () => {
     expect(hooks.current.todos.length).toBe(6);
 
     act(() => hooks.current.cancelTodoByIdx(5));
@@ -86,7 +86,7 @@ describe("can remove todo item", () => {
     expect(hooks.current.todos.length).toBe(5);
   });
 
-  test("first item middle", () => {
+  it("first item middle", () => {
     expect(hooks.current.todos.length).toBe(6);
 
     act(() => hooks.current.cancelTodoByIdx(3));

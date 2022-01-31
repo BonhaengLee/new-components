@@ -12,6 +12,7 @@ const Todo = (): JSX.Element => {
   return (
     <div>
       <input
+        data-test="todo-input"
         type="text"
         value={text}
         onChange={onChangeHandler}
