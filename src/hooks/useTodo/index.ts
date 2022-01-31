@@ -18,7 +18,15 @@ const useTodo = () => {
   };
 
   const cancelTodoByIdx = (idx: number) => {
-    setTodos(todos.filter((todo: Todo, todoIdx: number) => todoIdx !== idx));
+    // 1 : use a filter to find the todo
+    // setTodos(todos.filter((todo: Todo, todoIdx: number) => todoIdx !== idx));
+    // 2 : slice the array
+    let newTodos = Array<Todo>();
+    newTodos = newTodos.concat(
+      todos.slice(0, idx),
+      todos.slice(idx + 1, todos.length)
+    );
+    setTodos(newTodos);
   };
 
   return { todos, addTodo, cancelTodoByIdx };
