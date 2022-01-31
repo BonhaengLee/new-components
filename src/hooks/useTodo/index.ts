@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getTodo, Todo, State } from "../../api/todo";
 
-const useTodo = () => {
+const useTodo = ({ getTodos = getTodo }: { getTodos?: any } = {}) => {
   const [todos, setTodos] = useState<Todo[]>([]);
 
   useEffect(() => {
@@ -9,7 +9,8 @@ const useTodo = () => {
   }, []);
 
   async function fetchTodo() {
-    const todos = await getTodo();
+    console.log(getTodos);
+    const todos = await getTodos();
     setTodos(todos);
   }
 

@@ -1,9 +1,9 @@
 import { renderHook, act } from "@testing-library/react-hooks";
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
-import useTodo from ".";
 
-import { Todo, State } from "../../api/todo";
+import { getTodos, Todo, State } from "../../api/todo";
+import useTodo from ".";
 
 const TEMP_TODOS: Todo[] = [
   {
@@ -27,9 +27,12 @@ const mock = new MockAdapter(axios);
 
 describe("Todo App", () => {
   test("can add item", async () => {
-    mock.onGet("/todos").reply(200, { todos: TEMP_TODOS });
-
-    const { result, rerender, waitForNextUpdate } = renderHook(() => useTodo());
+    // mock.onGet("/todos").reply(200, { todos: TEMP_TODOS });
+    // const { result, rerender, waitForNextUpdate } = renderHook(() => useTodo());
+    const fetchTodos: any = jest.fn().mockImplementation(() => TEMP_TODOS);
+    const { result, rerender, waitForNextUpdate } = renderHook(() =>
+      useTodo({ getTodos: fetchTodos })
+    );
     await waitForNextUpdate();
 
     act(() => result.current.addTodo(TEMP_TODOS[0].text));
@@ -50,10 +53,13 @@ describe("can remove todo item", () => {
   };
 
   beforeEach(async () => {
-    mock.onGet("/todos").reply(200, { todos: TEMP_TODOS });
-
-    const { result, rerender, waitForNextUpdate }: any = renderHook(() =>
-      useTodo()
+    // mock.onGet("/todos").reply(200, { todos: TEMP_TODOS });
+    // const { result, rerender, waitForNextUpdate }: any = renderHook(() =>
+    //   useTodo()
+    // );
+    const fetchTodos: any = jest.fn().mockImplementation(() => TEMP_TODOS);
+    const { result, waitForNextUpdate }: any = renderHook(() =>
+      useTodo({ getTodos: fetchTodos })
     );
     hooks = result;
 
