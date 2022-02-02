@@ -11,6 +11,7 @@ const Home = (): JSX.Element => {
         <article>
           <section className={styles.ly_cont}>
             {/* 콘텐츠 */}
+            Learn React
             <PostList />
           </section>
         </article>

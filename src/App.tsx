@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<TodoApp />} />
+        <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />
         <Route path="/watchlist" element={<Watchlist />} />
         <Route path="/more" element={<More />} />
