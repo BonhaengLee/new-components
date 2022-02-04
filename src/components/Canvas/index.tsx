@@ -14,7 +14,7 @@ const Canvas = ({ draw, height, width }: CanvasProps): JSX.Element => {
   useEffect(() => {
     const context = canvas.current?.getContext("2d");
     draw(context as CanvasRenderingContext2D);
-  });
+  }, [draw]);
 
   return (
     <canvas
