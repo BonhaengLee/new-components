@@ -1,42 +1,33 @@
-import styles from "./Chart.module.scss";
-import classNames from "classnames/bind";
+import { useEffect, useRef } from "react";
+import Canvas from "../Canvas";
 
-const cx = classNames.bind(styles);
+import styles from "./Chart.module.scss";
+import cs from "classnames/bind";
+
+const cx = cs.bind(styles);
+
+const draw = (context: CanvasRenderingContext2D) => {
+  // Insert your canvas API code to draw an image
+  context.fillStyle = "red";
+  context.fillRect(0, 0, 100, 100);
+};
 
 const Chart = (): JSX.Element => {
   return (
-    <>
-      <header className={styles.ly_header}>
-        <div className={styles.ly_header_inner}>
-          <span className={styles.bl_titleWrapper}>
-            <h2>코스피지수</h2>
-            <span>서울 (KS11)</span>
-          </span>
-          <span className={styles.bl_btnWrapper}>
-            <i className="fas fa-search fa-2x"></i>
-            <i className="far fa-star fa-2x"></i>
-          </span>
-        </div>
-        {/* /.ly_header_inner */}
-      </header>
-      <main>
-        <article>
-          <section className={styles.ly_cont}>
-            <div className={styles.ly_header_inner}>
-              <span className={styles.bl_titleWrapper}>
-                <div className={styles.bl_titleWrapper_mainTitle}>
-                  <h2>2727.08</h2>
-                  <p>+6.69 (+0.25%)</p>
-                </div>
-                <div className={styles.bl_titleWrapper_info}>
-                  13:16:20 - 실시간. KRW 통화
-                </div>
-              </span>
-            </div>
-          </section>
-        </article>
-      </main>
-    </>
+    <div className={styles.ly_chart}>
+      <div className={styles.ly_chart_view}>
+        <Canvas draw={draw} height={100} width={100} />
+      </div>
+
+      <ul className={styles.bl_horizViewMenu}>
+        <li className={styles.active}>1일</li>
+        <li>1주</li>
+        <li>1달</li>
+        <li>1년</li>
+        <li>5년</li>
+        <li>최대</li>
+      </ul>
+    </div>
   );
 };
 

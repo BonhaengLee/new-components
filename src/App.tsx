@@ -11,6 +11,7 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
 import TodoApp from "./pages/TodoApp";
+import MarketDetail from "./pages/Market/[id]";
 
 function App() {
   // const router = useRouter();
@@ -21,6 +22,8 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/watchlist" element={<Watchlist />} />
         <Route path="/more" element={<More />} />
+
+        <Route path="/market/:id" element={<MarketDetail />} />
 
         <Route path="/greeting" element={<GreetingPage />} />
 
