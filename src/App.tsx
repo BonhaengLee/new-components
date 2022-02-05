@@ -7,6 +7,7 @@ import More from "./pages/More";
 import Page404 from "./pages/Page404";
 import GreetingPage from "./pages/Beta/greetingPage";
 import MarketDetail from "./pages/Market/[id]";
+import Market from "./pages/Market";
 
 function App() {
   // const router = useRouter();
@@ -18,6 +19,7 @@ function App() {
         <Route path="/watchlist" element={<Watchlist />} />
         <Route path="/more" element={<More />} />
 
+        <Route path="/market" element={<Market />} />
         <Route path="/market/:id" element={<MarketDetail />} />
 
         <Route path="/greeting" element={<GreetingPage />} />
