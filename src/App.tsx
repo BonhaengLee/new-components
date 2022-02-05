@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-// import { useRouter } from "next/router";
 
 import Home from "./pages/Home";
 import News from "./pages/News";
@@ -7,10 +6,6 @@ import Watchlist from "./pages/Watchlist";
 import More from "./pages/More";
 import Page404 from "./pages/Page404";
 import GreetingPage from "./pages/Beta/greetingPage";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
-
-import TodoApp from "./pages/TodoApp";
 import MarketDetail from "./pages/Market/[id]";
 
 function App() {

@@ -20,10 +20,15 @@ const Canvas = ({ draw, height, width }: CanvasProps): JSX.Element => {
     <canvas
       className={styles.el_canvas}
       ref={canvas as LegacyRef<HTMLCanvasElement>}
-      height={"80px"}
+      height={height}
       width={width}
     />
   );
+};
+
+Canvas.defaultProps = {
+  width: window.innerWidth,
+  height: window.innerWidth * 0.5,
 };
 
 export default Canvas;

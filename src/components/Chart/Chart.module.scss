@@ -1,13 +1,8 @@
 .ly_chart {
   text-align: center;
-  width: 100%;
 
   &_view {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    padding: 0 20px;
   }
 
   & > ul {

@@ -1,10 +1,8 @@
-import * as React from 'react';
+import * as React from "react";
 
-import styles from './Page404.module.scss';
+import styles from "./Page404.module.scss";
 
 const Page404: React.FC = () => {
-  const title = 'DDuck-SSang Page Not Found';
-
   return (
     <>
       <div className={styles.ly_customPageContainer}>
