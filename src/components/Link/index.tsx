@@ -6,17 +6,15 @@ interface LinkProps {
   rel?: string;
 }
 
-const Link: FC<LinkProps> = ({
-  children,
-  target = "_blank",
-  rel = "noopener noreferrer",
-  ...restProps
-}): JSX.Element => {
-  return (
-    <a className="App-link" target={target} rel={rel} {...restProps}>
-      {children}
-    </a>
-  );
+const Link: FC<LinkProps> = ({ children, ...restProps }): JSX.Element => (
+  <a className="App-link" {...restProps}>
+    {children}
+  </a>
+);
+
+Link.defaultProps = {
+  target: "_blank",
+  rel: "noopener noreferrer",
 };
 
 export default Link;
