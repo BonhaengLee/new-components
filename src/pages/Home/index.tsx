@@ -1,7 +1,8 @@
 import styles from "./Home.module.scss";
 
 import Header from "../../components/Header";
-import PostList from "../../components/PostList";
+// import PostList from "../../components/PostList";
+import Link from "../../components/Link";
 
 const Home = (): JSX.Element => {
   return (
@@ -12,7 +13,8 @@ const Home = (): JSX.Element => {
           <section className={styles.ly_cont}>
             {/* 콘텐츠 */}
             Learn React
-            <PostList />
+            {/* <PostList /> */}
+            <Link href="https://reactjs.org/">Learn React</Link>
           </section>
         </article>
       </main>
