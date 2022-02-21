@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import News from "./pages/News";
@@ -12,7 +12,7 @@ import Market from "./pages/Market";
 function App() {
   // const router = useRouter();
   return (
-    <>
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />
@@ -28,7 +28,7 @@ function App() {
       </Routes>
       {/* <Footer /> */}
       {/* <NavBar /> */}
-    </>
+    </Router>
   );
 }
 
