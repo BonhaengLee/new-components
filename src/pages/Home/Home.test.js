@@ -6,6 +6,6 @@ describe("Home", () => {
   it("renders Home component", () => {
     render(<Home />);
 
-    screen.getByText("Search:");
+    screen.getByText("Searhc");
   });
 });
