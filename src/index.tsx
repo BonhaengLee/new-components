@@ -1,4 +1,4 @@
-import React from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
 import ReactDOM from "react-dom";
 import App from "./App";
 
@@ -8,11 +8,15 @@ import { BrowserRouter } from "react-router-dom";
 import "./styles/globals.scss";
 import "./styles/reset.css";
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+const queryClient = new QueryClient();
 
+ReactDOM.render(
+  <QueryClientProvider client={queryClient}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+    ,
+  </QueryClientProvider>,
   document.getElementById("root")
 );
 
