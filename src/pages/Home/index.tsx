@@ -1,36 +1,45 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import "../../styles/Home.module.scss";
 
-function Home() {
-  const [search, setSearch] = useState("");
+export default function Home() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-    setSearch(event.target.value);
-  }
+  useEffect(() => {
+    const fetchUsers = async () => {
+      setLoading(true);
+      try {
+        const res = await fetch("https://jsonplaceholder.typicode.com/users");
+        const users = await res.json();
+        setData(users);
+      } catch (err) {
+        console.error(err);
+        if (err instanceof Error) {
+          setError(err.message);
+        }
+      }
+      setLoading(false);
+    };
+
+    fetchUsers();
+  }, []);
+
+  console.log("home");
 
   return (
-    <div>
-      <Search value={search} onChange={handleChange}>
-        Search:
-      </Search>
-
-      <p>Searches for {search ? search : "..."}</p>
+    <div className="Home">
+      <h1>Data Fetching</h1>
+      <h2>The React Hooks Way</h2>
+      <div>
+        {loading ? (
+          <p>Loading...</p>
+        ) : error ? (
+          <p>{error}</p>
+        ) : (
+          data.map(({ id, name }) => <p key={id}>{name}</p>)
+        )}
+      </div>
     </div>
   );
 }
-
-interface SearchProps {
-  value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  children: string;
-}
-
-function Search({ value, onChange, children }: SearchProps) {
-  return (
-    <div>
-      <label htmlFor="search">{children}</label>
-      <input id="search" type="text" value={value} onChange={onChange} />
-    </div>
-  );
-}
-
-export default Home;
