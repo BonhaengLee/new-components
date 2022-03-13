@@ -4,6 +4,7 @@ import App from "./App";
 
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import { ReactQueryDevtools } from "react-query/devtools";
 // font 및 베이스 스타일과 reset을 적용하기 위한 CSS
 import "./styles/globals.scss";
 import "./styles/reset.css";
@@ -14,6 +15,7 @@ ReactDOM.render(
   <QueryClientProvider client={queryClient}>
     <BrowserRouter>
       <App />
+      <ReactQueryDevtools />
     </BrowserRouter>
     ,
   </QueryClientProvider>,
