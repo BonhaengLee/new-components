@@ -1,11 +1,12 @@
-import { QueryClient, QueryClientProvider } from "react-query";
 import ReactDOM from "react-dom";
-import App from "./App";
-
-import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-// font 및 베이스 스타일과 reset을 적용하기 위한 CSS
+import { Provider } from "jotai";
+
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+
 import "./styles/globals.scss";
 import "./styles/reset.css";
 
@@ -13,11 +14,12 @@ const queryClient = new QueryClient();
 
 ReactDOM.render(
   <QueryClientProvider client={queryClient}>
-    <BrowserRouter>
-      <App />
-      <ReactQueryDevtools />
-    </BrowserRouter>
-    ,
+    <Provider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
+    <ReactQueryDevtools />,
   </QueryClientProvider>,
   document.getElementById("root")
 );
