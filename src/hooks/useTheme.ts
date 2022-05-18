@@ -1,16 +1,16 @@
-import { atom, useAtom } from "jotai";
+import { useAtom } from "jotai";
+import { atomWithStorage } from "jotai/utils";
 import { useEffect } from "react";
 
 const browser = typeof window !== "undefined";
 
-const localValue = browser ? localStorage.getItem("theme") : "light";
-const systemTheme =
+// The atom to hold the value goes here
+const themeAtom = atomWithStorage(
+  "theme",
   browser && matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
-    : "light";
-
-// The atom to hold the value goes here
-const themeAtom = atom(localValue || systemTheme);
+    : "light"
+);
 
 /** Sitewide theme */
 export function useTheme() {
@@ -18,10 +18,9 @@ export function useTheme() {
 
   useEffect(() => {
     if (!browser) return;
-    localStorage.setItem("theme", theme);
     document.body.classList.remove("light", "dark");
     document.body.classList.add(theme);
   }, [theme]);
 
-  return [theme, setTheme];
+  return [theme, setTheme] as const;
 }

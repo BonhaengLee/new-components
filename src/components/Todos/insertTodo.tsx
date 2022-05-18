@@ -1,7 +1,9 @@
-import React from "react";
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { useState } from "react";
 import { useMutation, useQueryClient } from "react-query";
 
-const insertTodo = async (todoId) => {
+const insertTodo = async (todoId: number) => {
   // Send a request to API
 };
 
@@ -19,6 +21,7 @@ function InsertTodo() {
       const snapshotOfPreviousTodos = queryClient.getQueryData("todos");
 
       // Modify cache to reflect this optimistic update
+      // @ts-ignore
       queryClient.setQueryData("todos", (oldTodos) => [newTodo, ...oldTodos]);
 
       // Return a snapshot so we can rollback in case of failure
@@ -27,10 +30,10 @@ function InsertTodo() {
       };
     },
 
-    onError: (error, newTodo, { snapshotOfPreviousTodos }) => {
-      // Rollback the changes using the snapshot
-      queryClient.setQueryData("todos", snapshotOfPreviousTodos);
-    },
+    // onError: (error, newTodo, { snapshotOfPreviousTodos }) => {
+    //   // Rollback the changes using the snapshot
+    //   queryClient.setQueryData("todos", snapshotOfPreviousTodos);
+    // },
 
     onSuccess() {
       // Refetch or invalidate related queries
@@ -43,17 +46,17 @@ function InsertTodo() {
     },
   });
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
 
-    mutation.mutate({
-      id: "__RANDOM_TEMP_ID__",
-      text,
-    });
-  };
+  //   mutation.mutate({
+  //     id: "__RANDOM_TEMP_ID__",
+  //     text,
+  //   });
+  // };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={() => console.log("handleSubmit")}>
       <textarea
         placeholder="Add a new todo..."
         onChange={(event) => setText(event.target.value)}

@@ -1,13 +1,13 @@
 import React from "react";
 import { useQuery } from "react-query";
-import LikeTweet from "./LikeTweet";
+// import LikeTweet from "./LikeTweet";
 
 const fetchTweets = async () => {
   // Fetch tweets from the API
 };
 
-function Tweets() {
-  const { data, isError, isLoading } = useQuery("tweets", fetchTweets);
+export default function Tweets() {
+  const { isError, isLoading } = useQuery("tweets", fetchTweets);
 
   if (isError) {
     return <p>Failed to load tweets.</p>;
@@ -19,7 +19,7 @@ function Tweets() {
 
   return (
     <ul>
-      {data.map((tweet) => (
+      {/* {data.map((tweet) => (
         <li key={tweet.id}>
           <small>{tweet.username}</small>
           <p>{tweet.text}</p>
@@ -29,7 +29,7 @@ function Tweets() {
             ...
           </footer>
         </li>
-      ))}
+      ))} */}
     </ul>
   );
 }

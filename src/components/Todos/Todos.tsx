@@ -5,7 +5,7 @@ const fetchTodos = async () => {
   // Fetch todos from the API
 };
 
-function Todos() {
+export default function Todos() {
   const { data, isError, isLoading } = useQuery("todos", fetchTodos);
 
   if (isError) {
@@ -18,12 +18,12 @@ function Todos() {
 
   return (
     <>
-      <InsertTodo />
-
+      {/* <InsertTodo /> */}
+      {data}
       <ul>
-        {data.map((todo) => (
+        {/* {data.map((todo) => (
           <li key={todo.id}>{todo.text}</li>
-        ))}
+        ))} */}
       </ul>
     </>
   );
