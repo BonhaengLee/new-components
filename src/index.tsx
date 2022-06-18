@@ -19,7 +19,7 @@ ReactDOM.render(
         <App />
       </BrowserRouter>
     </Provider>
-    <ReactQueryDevtools />,
+    <ReactQueryDevtools />
   </QueryClientProvider>,
   document.getElementById("root")
 );
