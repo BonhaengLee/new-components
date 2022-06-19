@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NewTodoPage from "./pages/NewTodoPage";
-import "./App.css";
+// import "./App.css";
 
 function App() {
   return (

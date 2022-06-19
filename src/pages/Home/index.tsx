@@ -1,10 +1,10 @@
-import Box5 from "../../components/Box/Box5";
-import "../../styles/Home.module.scss";
+import Canvas from "../../components/Canvas/Canvas";
+import styles from "./Home.module.scss";
 
-export default function App() {
+export default function Home() {
   return (
-    <div className="App">
-      <Box5 />
+    <div className={styles.ly_home}>
+      <Canvas />
     </div>
   );
 }
