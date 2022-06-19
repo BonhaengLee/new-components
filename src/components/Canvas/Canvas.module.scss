@@ -2,18 +2,37 @@
   border: 1px solid #adb5bd;
   width: 100%;
 }
-// for rain effect
+// for rain  effect
 .canvas {
   display: inline;
+  height: 100vh;
 }
 
-.flower {
+.flowerA {
   width: 15px;
   height: 15px;
-  border-radius: 50%;
+  border-radius: 45% 25% 50% 20%;
   z-index: 1;
   position: absolute;
   top: -20%;
+}
+
+.flowerB {
+  width: 8px;
+  height: 8px;
+  border-radius: 60% 15% 65% 20%;
+  z-index: 1;
+  position: absolute;
+  top: -10%;
+}
+
+.flowerC {
+  width: 10px;
+  height: 10px;
+  border-radius: 60% 17% 55% 23%;
+  z-index: 1;
+  position: absolute;
+  top: -5%;
 }
 
 .petal {
@@ -54,100 +73,265 @@
 }
 
 #flower1 {
-  background-color: yellow;
+  background-image: linear-gradient(
+    rgba(251, 132, 156, 0.803),
+    rgba(255, 197, 208, 0.422)
+  );
   position: absolute;
-  left: 8%;
+  left: 4%;
   animation-name: rain;
-  animation-duration: 7s;
+  animation-duration: 13s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-.f1p {
-  background-color: pink;
-}
-
 #flower2 {
-  background-color: orange;
+  background-image: linear-gradient(
+    120,
+    rgba(251, 132, 156, 0.803),
+    rgba(255, 197, 208, 0.9)
+  );
   position: absolute;
-  left: 25%;
+  left: 8%;
   animation-name: rain;
-  animation-duration: 4s;
+  animation-duration: 15.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-delay: 1.5s;
 }
 
-.f2p {
-  background-color: yellow;
-}
-
 #flower3 {
-  background-color: red;
+  background-image: linear-gradient(
+    rgba(255, 197, 208, 0.422) rgba(255, 166, 184, 0.803)
+  );
   position: absolute;
-  left: 42%;
+  left: 12%;
   animation-name: rain;
-  animation-duration: 10s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-delay: 0s;
 }
 
-.f3p {
-  background-color: skyblue;
-}
-
 #flower4 {
-  background-color: cyan;
+  background-image: linear-gradient(
+    rgba(251, 132, 156, 0.803),
+    rgba(255, 197, 208, 0.422)
+  );
   position: absolute;
-  left: 59%;
+  left: 16%;
   animation-name: rain;
-  animation-duration: 2.5s;
+  animation-duration: 14.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-delay: 2.5s;
 }
 
-.f4p {
-  background-color: blue;
-}
-
 #flower5 {
-  background-color: green;
+  background-image: linear-gradient(
+    rgba(255, 197, 208, 0.422) rgba(255, 166, 184, 0.803)
+  );
   position: absolute;
-  left: 75%;
+  left: 20%;
   animation-name: rain;
-  animation-duration: 3s;
+  animation-duration: 12s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
 }
 
-.f5p {
-  background-color: lightgreen;
-}
-
 #flower6 {
-  background-color: magenta;
+  background-image: linear-gradient(
+    rgba(251, 132, 156, 0.803),
+    rgba(255, 197, 208, 0.422)
+  );
   position: absolute;
-  left: 90%;
+  left: 24%;
   animation-name: rain;
-  animation-duration: 2s;
+  animation-duration: 9s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
   animation-delay: 4.5s;
 }
 
-.f6p {
-  background-color: turquoise;
+#flower7 {
+  background-image: linear-gradient(
+    rgba(255, 197, 208, 0.422) rgba(251, 132, 156, 0.803)
+  );
+  position: absolute;
+  left: 28%;
+  animation-name: rain;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-delay: 1.5s;
+}
+
+#flower8 {
+  background-image: linear-gradient(
+    rgba(255, 183, 197, 0.803),
+    rgba(255, 197, 208, 0.422)
+  );
+  position: absolute;
+  left: 34%;
+  animation-name: rain;
+  animation-duration: 17;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-delay: 2.5s;
+}
+
+#flower9 {
+  background-image: linear-gradient(
+    rgba(255, 197, 208, 0.422) rgba(255, 166, 184, 0.803)
+  );
+  position: absolute;
+  left: 42%;
+  animation-name: rain;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+#flower10 {
+  background-image: linear-gradient(
+    rgba(255, 183, 197, 0.803),
+    rgba(255, 197, 208, 0.422)
+  );
+  position: absolute;
+  left: 46%;
+  animation-name: rain;
+  animation-duration: 16.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+}
+
+#flower11 {
+  background-image: linear-gradient(
+    rgba(255, 197, 208, 0.422) rgba(255, 166, 184, 0.803)
+  );
+  position: absolute;
+  left: 50%;
+  animation-name: rain;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-delay: 4.5s;
+}
+
+#flower12 {
+  background-image: linear-gradient(
+    rgba(255, 183, 197, 0.803),
+    rgba(255, 197, 208, 0.422)
+  );
+  position: absolute;
+  left: 55%;
+  animation-name: rain;
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-delay: 2s;
+}
+
+#flower13 {
+  background-image: linear-gradient(
+    rgba(251, 132, 156, 0.803),
+    rgba(255, 197, 208, 0.422)
+  );
+  position: absolute;
+  left: 60%;
+  animation-name: rain;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-delay: 2s;
+}
+
+#flower14 {
+  background-image: linear-gradient(
+    rgba(255, 183, 197, 0.803),
+    rgba(255, 197, 208, 0.422)
+  );
+  position: absolute;
+  left: 65%;
+  animation-name: rain;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-delay: 2s;
+}
+
+#flower15 {
+  background-image: linear-gradient(
+    rgba(255, 183, 197, 0.803),
+    rgba(255, 197, 208, 0.422)
+  );
+  position: absolute;
+  left: 75%;
+  animation-name: rain;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-delay: 2s;
+}
+
+#flower16 {
+  background-image: linear-gradient(
+    rgba(251, 132, 156, 0.803),
+    rgba(255, 197, 208, 0.422)
+  );
+  position: absolute;
+  left: 85%;
+  animation-name: rain;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-delay: 2s;
+}
+
+#flower17 {
+  background-image: linear-gradient(
+    rgba(255, 166, 184, 0.803),
+    rgba(255, 197, 208, 0.422)
+  );
+  position: absolute;
+  left: 95%;
+  animation-name: rain;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-delay: 2s;
 }
 
 @keyframes rain {
   0% {
-    transform: rotate(0deg);
+    transform: translate3d(5px, 15px, 5px) rotate(0deg);
     top: -10%;
   }
+  5% {
+    transform: translate3d(25px, 25px, 35px) rotate(0deg);
+    top: -10%;
+  }
+  15% {
+    transform: translate3d(45px, 25px, 5px) rotate(165deg);
+  }
+  30% {
+    transform: translate3d(40px, 30px, 5px) rotate(145deg);
+  }
+  40% {
+    transform: translate3d(55px, 35px, 5px) rotate(85deg);
+  }
+  50% {
+    transform: translate3d(50px, 40px, 5px) rotate(195deg);
+  }
+  65% {
+    transform: translate3d(25px, 45px, 5px) rotate(75deg);
+  }
+  80% {
+    transform: translate3d(30px, 40px, 5px) rotate(225deg);
+  }
   100% {
-    transform: rotate(720deg);
-    top: 100vh;
+    transform: translate3d(0, 0, 5px) rotate(260deg);
+    top: calc(100vh - 20px);
   }
 }
